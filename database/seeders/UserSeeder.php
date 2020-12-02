@@ -18,5 +18,11 @@ class UserSeeder extends Seeder
             ->times(5)
             ->hasPosts(3)
             ->create();
+
+        User::create([
+            'name' => 'local',
+            'email' => "localhost@localhost",
+            'password' => bcrypt('pass'),
+        ]);
     }
 }

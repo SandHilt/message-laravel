@@ -13,7 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', ['\App\Http\Controllers\PostController', 'index']);
+Route::get('/', ['\App\Http\Controllers\PostController', 'index'])
+    ->name('home');
 Route::post('/post', ['\App\Http\Controllers\PostController', 'store'])
     ->name('post.store')
     ->middleware('auth');
+
+Route::post('/logme', 
+    [
+        '\App\Http\Controllers\LoginController',
+        'authenticate'
+    ])
+    ->name('logme')
+    ->middleware('guest');

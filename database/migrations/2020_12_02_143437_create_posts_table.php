@@ -15,11 +15,13 @@ class CreatePostsTable extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
-            $table->boolean('isEdited')->default('false');
             $table->text('message');
             $table->timestamps();
-            $table->foreignId('user_id')
-                ->constrained()
+            $table->string('user_email');
+            
+            $table->foreign('user_email')
+                ->references('email')
+                ->on('users')
                 ->onDelete('cascade');
         });
     }

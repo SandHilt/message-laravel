@@ -22,7 +22,8 @@
     </form>
     @endauth
     @guest
-    <form class="login" action="" method="POST">
+    <form class="login" action="{{ route('logme') }}" method="POST">
+        @csrf
         <label for="email">E-mail:</label>
         <input type="email" name="email" id="email">
         <label for="password">Senha:</label>
