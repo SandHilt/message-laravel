@@ -14,6 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', ['\App\Http\Controllers\PostController', 'index']);
-
-Route::resource('post', '\App\Http\Controllers\PostController')
-    ->except(['index', 'create', 'show']);
+Route::post('/post', ['\App\Http\Controllers\PostController', 'store'])
+    ->name('post.store')
+    ->middleware('auth');

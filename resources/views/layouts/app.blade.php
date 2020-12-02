@@ -16,25 +16,10 @@
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
     </head>
     <body>
-        <section class="messages">
-            <header>
-                <h1 class="title">Messages</h1>
-            </header>
 
-            <ul class="messages-list">
-            @foreach ($posts as $post)
-                <li>
-                    <p><strong>{{ $post->user->name }} say:</strong> {{ $post->message }}</p>
-                    <time>{{$post->updated_at->diffForHumans()}}</time>
-                </li>
-            @endforeach
-            </ul>
-            <form class="sender" action="POST">
-                <label for="message">Message:</label>
-                <input placeholder="Digite seu texto aqui" type="text" name="message" id="message" maxLength="10">
-                <button class="btn" type="submit">Enviar</button>
-            </form>
-        </section>
+        <main>
+            @yield('content')
+        </main>
         <script src="{{ mix('js/app.js') }}"></script>
     </body>
 </html>
