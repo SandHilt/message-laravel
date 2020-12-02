@@ -15,8 +15,9 @@ class CreatePostsTable extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
+            $table->boolean('isEdited')->default('false');
             $table->text('message');
-            $table->timestamps('time');
+            $table->timestamps();
         });
     }
 

@@ -19,6 +19,8 @@
             @foreach ($posts as $post)
                 <li>
                     <p>{{ $post->message }}</p>
+                    <date>{{$post->updated_at->diffForHumans()}}</date>
+                    <hr />
                 </li>
             @endforeach
             </ul>
