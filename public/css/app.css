@@ -1,15 +1,44 @@
 :root {
-    --blue: #2da;
+    --dark: #333;
+    --white: #fff;
+    --gray: #808080;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 body {
-    background-color: #2da;
-    background-color: var(--blue);
-    color: white;
+    background-color: #333;
+    background-color: var(--dark);
+    color: #fff;
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.messages {
+    display: flex;
+    flex-direction: column;
+    border: thin solid #fff;
+    border: thin solid var(--white);
+    max-width: 100vmin;
+    padding: 2rem;
+
+    scrollbar-color: #808080 #fff;
+
+    scrollbar-color: var(--gray) var(--white);
+    scrollbar-width: thin;
 }
 
 .messages > ul {
-    /* list-style: none; */
+    list-style-type: square;
+    padding: 0 1rem;
+    margin: 0;
+    height: 40vmin;
+    overflow-y: scroll;
 }
 
 .messages > ul li + li {
@@ -18,4 +47,17 @@ body {
 
 .messages p {
     margin: 0;
+}
+
+.messages .sender {
+    display: grid;
+    grid-template-columns: auto 5fr 1fr;
+    align-items: center;
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
+    margin-top: 2rem;
+}
+
+#message {
+    width: 100%;
 }

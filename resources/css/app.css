@@ -47,6 +47,7 @@ body {
 .messages .sender {
     display: grid;
     grid-template-columns: auto 5fr 1fr;
+    align-items: center;
     column-gap: 1rem;
     margin-top: 2rem;
 }
