@@ -25,7 +25,7 @@
             @foreach ($posts as $post)
                 <li>
                     <p>{{ $post->message }}</p>
-                    <date>{{$post->updated_at->diffForHumans()}}</date>
+                    <time>{{$post->updated_at->diffForHumans()}}</time>
                     <hr />
                 </li>
             @endforeach
@@ -33,7 +33,7 @@
             <form class="sender" action="POST">
                 <label for="message">Message:</label>
                 <input placeholder="Digite seu texto aqui" type="text" name="message" id="message" maxLength="10">
-                <button type="submit">Enviar</button>
+                <button class="btn" type="submit">Enviar</button>
             </form>
         </section>
         <script src="{{ mix('js/app.js') }}"></script>

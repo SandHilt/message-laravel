@@ -64,3 +64,11 @@ body {
 #message {
     width: 100%;
 }
+
+.btn {
+    cursor: pointer;
+    padding: 0.5rem;
+    background-color: var(--dark);
+    color: var(--white);
+    border: thin solid var(--white);
+}
