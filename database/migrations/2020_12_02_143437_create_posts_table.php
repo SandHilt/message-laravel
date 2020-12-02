@@ -18,6 +18,9 @@ class CreatePostsTable extends Migration
             $table->boolean('isEdited')->default('false');
             $table->text('message');
             $table->timestamps();
+            $table->foreignId('user_id')
+                ->constrained()
+                ->onDelete('cascade');
         });
     }
 

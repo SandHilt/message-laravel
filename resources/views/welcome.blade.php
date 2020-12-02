@@ -24,9 +24,8 @@
             <ul class="messages-list">
             @foreach ($posts as $post)
                 <li>
-                    <p>{{ $post->message }}</p>
+                    <p><strong>{{ $post->user->name }} say:</strong> {{ $post->message }}</p>
                     <time>{{$post->updated_at->diffForHumans()}}</time>
-                    <hr />
                 </li>
             @endforeach
             </ul>
