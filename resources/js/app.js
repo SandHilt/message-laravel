@@ -1,1 +1,3 @@
-require('./bootstrap');
+'use strict';
+
+console.log('hey');

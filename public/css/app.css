@@ -1,0 +1,21 @@
+:root {
+    --blue: #2da;
+}
+
+body {
+    background-color: #2da;
+    background-color: var(--blue);
+    color: white;
+}
+
+.messages > ul {
+    /* list-style: none; */
+}
+
+.messages > ul li + li {
+    margin-top: 1rem;
+}
+
+.messages p {
+    margin: 0;
+}
