@@ -9,12 +9,21 @@
 }
 
 body {
+    font-family: "Noto Sans", sans-serif;
     background-color: var(--dark);
     color: var(--white);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+}
+
+.title {
+    margin: 0;
+}
+
+.messages > header {
+    margin: 1rem 0;
 }
 
 .messages {
@@ -28,15 +37,15 @@ body {
     scrollbar-width: thin;
 }
 
-.messages > ul {
-    list-style-type: square;
+.messages-list {
+    list-style-type: none;
     padding: 0 1rem;
     margin: 0;
     height: 40vmin;
     overflow-y: scroll;
 }
 
-.messages > ul li + li {
+.messages-list li + li {
     margin-top: 1rem;
 }
 
